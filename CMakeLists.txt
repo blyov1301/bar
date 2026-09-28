@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.14)
+project(bar)
+find_packege(GTest REQUIRED)
+enable_testing()
+add_executable(bar_tests test_bar.cpp)
+target_link_libraries(bar_tests GTest::gtest_main)
+add_test(NAME bar_tests COMMAND bar_tests)
